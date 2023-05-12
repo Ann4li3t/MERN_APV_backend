@@ -27,7 +27,7 @@ const corsOptions = {
 //app.use(cors(corsOptions));
 
     // configuracion de CORS
-app.use(cors({ origin: '*' }))
+
 
   /* const whitelist = [process.env.FRONTEND_URL]
   const corsOptions = {
@@ -47,11 +47,13 @@ app.use(cors({ origin: '*' }))
   }
   app.use(cors(corsOptions)); */
 
+app.use(cors({ origin: '*' }))
+
 app.use('/api/veterinarios/', veterinarioRoutes);
 
 app.use('/api/pacientes/', pacienteRoutes);
 
-const port = process.env.DB_Port || 4000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
     console.log(`Servidor funcionando por el puerto ${port}`)
