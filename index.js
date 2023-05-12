@@ -41,7 +41,9 @@ const corsOptions = {
       } else {
         callback(new Error('Not allowed by CORS'))
       }
+      console.log(process.env.FRONTEND_URL)
     }
+    
   }
   app.use(cors(corsOptions));
 
