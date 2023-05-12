@@ -27,9 +27,9 @@ const corsOptions = {
 //app.use(cors(corsOptions));
 
     // configuracion de CORS
-    //app.use(cors({ origin: '*' }))
+app.use(cors({ origin: '*' }))
 
-  const whitelist = [process.env.FRONTEND_URL]
+  /* const whitelist = [process.env.FRONTEND_URL]
   const corsOptions = {
     origin: function (origin, callback) {
       if(!origin){//for bypassing postman req with  no origin
@@ -45,7 +45,7 @@ const corsOptions = {
     }
     
   }
-  app.use(cors(corsOptions));
+  app.use(cors(corsOptions)); */
 
 app.use('/api/veterinarios/', veterinarioRoutes);
 
